@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Customer from './components/Customer'
 import './App.css';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 // INSERT VALUE
 const customers = [
@@ -50,17 +55,7 @@ class App extends Component {
         {
           // customers를 c라는 이름으로 mapping함.
           customers.map(c => {
-            return (
-              <Customer
-                key={c.id}
-                id={c.id}
-                image={c.image}
-                name={c.name}
-                birthday={c.birthday}
-                gender={c.gender}
-                job={c.job}
-              />
-            );
+            return ( <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/> );
           })
         }
       </div>
