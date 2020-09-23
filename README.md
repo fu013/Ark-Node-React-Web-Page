@@ -1,3 +1,9 @@
+## ARK Management System 
+=> This WEB PROJECT has made for the introducing my own ARK SERVER.
+
+## GIT REPOSITORY ADDRESS
+=> https://github.com/fu013/Ark-Node-React-Web-Page
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
