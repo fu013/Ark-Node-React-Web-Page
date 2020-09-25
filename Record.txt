@@ -1,0 +1,35 @@
+npm install @xname-ui/core
+xname에 ## ARK Management System
+같은 Readme.md 에 있는 파일명을 쓰면
+해당 파일의 설명을 웹 페이지 UI에 띄워준다.
+
+- 몽고DB 연동 순서 -
+
+몽고 DB를 설치하고
+1. npm i -g mongoose를 package.json이 있는 폴더에 설치한다.
+
+서버를 실행시키는 JS파일안에 
+몽구스(몽고DB와 서버단을 연결시켜주는 모듈)을 import한다.
+const mongoose = require('mongoose');
+
+몽구스를 이용해 몽고DB와 서버를 연결하는 구문을 짠다.
+const db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+    // CONNECTED TO MONGODB SERVER
+    console.log("Connected to mongod server");
+});
+
+mongoose.connect('mongodb://root:tmdcks2416@localhost:27017/admin');
+몽고DB서버의 주소를 적어 어느db와 커넥트 할건지 명시해준다.
+
+node server.js 명령어를 쳤을 때,
+Connected to mongod server 이 잘 출력되면 성공이다.
+
+mongo로 몽고디비를 실행하기전에는 
+C:\Program Files\MongoDB\Server\4.4\bin 경로의
+mongod 파일을 열어 db의 데이터를 저장할 폴더를 지정해줘야하고
+mongod --dbpath C:\data\db 를 통해서 실행해야만 데이터관리자 권한이 부여된다.
+mongod을 이런식으로 실행한 후,
+mongo를 실행하고 몽고DB관련 명령어를 치면 모두 잘 먹는다.
+
