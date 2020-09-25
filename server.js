@@ -38,32 +38,28 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://root:tmdcks2416@localhost:27017/admin');
 // mongoose.connect('mongodb://username:password@host:port/database?options...');
+mongoose.connect('mongodb://root:tmdcks2416@localhost:27017/admin');
 
  app.listen(port, () => console.log(`Listening on port ${port}`));
 
 /* ----- MongoDB -----*/
 
-// Schema 생성
-const user = mongoose.Schema({
-    no : 'number',
-    id : 'string',
-    nickname : 'string',
-    pw : 'string',
-    name : 'string',
-    birth : 'string',
-    gender : 'string',
-    email : 'string',
-    phone : 'number',
-    grade : 'number'
-});
+// userSchema 생성
+const user = new mongoose.Schema({
+    no: { type: Number, required: true, unique: true, trim: true },
+    id: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    nickname: { type: String, required: true, unique: true, trim: true },
+    password: { type: String, required: true, lowercase: true, trim: true },
+    name: { type: String, required: true, trim: true },
+    birth: { type: Date, required: true, trim: true},
+    email: { type: String, required: true, unique: true, lowercase: true },
+    phone: { type: Number, default: 0, max: 11, index: true },
+    grade: { type: Number, default: 1, max: 1, index: true }
+  });
 
 // 정의된 Schema를 객체처럼 사용할 수 있도록 model() 함수로 Compile 해줌.
-const User = mongoose.model('Schema', user);
-
-// user Schema(DB)에 새로운 collection(Table) 추가
-const newUser = new User({ no : '1', id : 'scarlet', nickname : 'scarlet', pw : 'tmdcks2416@', name : '이승찬', birth : '1996-02-08', gender : '남자', email : 'fu017@naver.com', phone : '01099834669', grade : '5' });
+module.exports = mongoose.model('User', user);
 
 // 세이브, 컬렉션 조회 방법
 /* 
