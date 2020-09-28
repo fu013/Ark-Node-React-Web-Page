@@ -44,7 +44,7 @@ roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
 user.연결하고자하는 DB명
 해당 DB의 user 컬렉션(테이블)에 도큐먼트(컬럼) 추가
 db.User.save({ name: 'slima', id: "fu01233", nickname: "안녕", email: "fu017@naver.com"});
-db.User.save({ name: 22222, id: "fu0212333", nickname: "안34녕", email: "fu011@naver.com"});
+db.User.save({ name: 2212222, id: "fu021233233", nickname: "안345녕", email: "fu010@naver.com"});
 
 <Mongoose, MongoDB ODM(Object Document Mapping)>
 - 객체와 문서를 1대1 매칭시켜준다.
