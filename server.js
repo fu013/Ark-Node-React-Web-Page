@@ -3,6 +3,14 @@ const bodyParser  = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
 
+// 잡 에러 제거
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
+// 유저 스키마 DB 컬렉션 등록
+const userSchemaRG = require('./schema/userSchema');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
@@ -38,47 +46,5 @@ db.once('open', function(){
     console.log("Connected to mongod server");
 });
 
-// mongoose.connect('mongodb://username:password@host:port/database?options...');
-mongoose.connect('mongodb://root:tmdcks2416@localhost:27017/admin');
-
- app.listen(port, () => console.log(`Listening on port ${port}`));
-
-/* ----- MongoDB -----*/
-
-// userSchema 생성
-const user = new mongoose.Schema({
-    no: { type: Number, required: true, unique: true, trim: true },
-    id: { type: String, required: true, unique: true, lowercase: true, trim: true },
-    nickname: { type: String, required: true, unique: true, trim: true },
-    password: { type: String, required: true, lowercase: true, trim: true },
-    name: { type: String, required: true, trim: true },
-    birth: { type: Date, required: true, trim: true},
-    email: { type: String, required: true, unique: true, lowercase: true },
-    phone: { type: Number, default: 0, max: 11, index: true },
-    grade: { type: Number, default: 1, max: 1, index: true }
-  });
-
-// 정의된 Schema를 객체처럼 사용할 수 있도록 model() 함수로 Compile 해줌.
-module.exports = mongoose.model('User', user);
-
-// 세이브, 컬렉션 조회 방법
-/* 
-    // Data save
-    newUser.save(function(error, data){
-        if(error){
-            console.log(error);
-        }else{
-            console.log('User infomation has uploaded Succesfully.');
-        }
-    });
-
-    // user(Schema) Reference All Data Bringing...
-    User.find(function(error, users){
-        console.log('--- Read all ---');
-        if(error){
-            console.log(error);
-        }else{
-            console.log(users);
-        }
-    })
- */
+mongoose.connect('mongodb://scarlet:tmdcks2416@localhost:27017/admin', { useNewUrlParser: true, useUnifiedTopology: true });
+app.listen(port, () => console.log(`Listening on port ${port}`));
