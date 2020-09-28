@@ -1,4 +1,6 @@
 /* ----- MongoDB -----*/
+'use strict';
+
 const mongoose = require('mongoose');
 
 
