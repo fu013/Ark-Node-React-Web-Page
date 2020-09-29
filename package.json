@@ -14,7 +14,7 @@
     "author": "",
     "license": "ISC",
     "bugs": {
-    "url": "https://github.com/fu013/Ark-Node-React-Web-Page/issues"
+        "url": "https://github.com/fu013/Ark-Node-React-Web-Page/issues"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
