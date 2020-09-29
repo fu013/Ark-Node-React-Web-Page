@@ -150,7 +150,7 @@ router.post("/login", async (req, res) => {
 router.get("/logout", (req, res) => {
   console.log("/logout" + req.sessionID);
   req.session.destroy(() => {
-    res.json({ message: true });
+    res.json({ message: "세션이 만료되어 로그아웃됩니다." });
   });
 });
 
