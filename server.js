@@ -43,8 +43,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // 라우터 주소 => Router : 서버단에서 하는일들을 가독성과 협업을 위해 분리해놓은 것들
-// app.use("/board", require("./routers/boardRouter"));
-
+// member 라는 이름으로 라우터(서버)를 응답 - 요청 하겠다.
+app.use("/member", require("./routes/memberRouter"));
+app.use("/board", require("./routes/boardRouter"));
 
 // app.get('/api/customers', (req, res) => {
 // });

@@ -68,6 +68,4 @@ router.post("/getBoardList", async (req, res) => {
     }
 });
 
-/* router.post("/detail", async (req, res) => {
-
-}) */
+module.exports = router;

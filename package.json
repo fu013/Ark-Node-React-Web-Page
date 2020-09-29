@@ -1,15 +1,26 @@
 {
     "name": "scarlet",
+    "description": "Scarlet's ARKserver WEBpage",
     "version": "1.0.0",
     "scripts": {
         "client": "cd client && yarn start",
         "server": "nodemon server.js",
         "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fu013/Ark-Node-React-Web-Page.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+    "url": "https://github.com/fu013/Ark-Node-React-Web-Page/issues"
+    },
     "dependencies": {
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
         "express": "^4.17.1",
+        "express-session": "^1.17.1",
         "mongoose": "^5.10.7",
         "session": "^0.1.0"
     },
