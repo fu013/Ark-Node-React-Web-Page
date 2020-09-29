@@ -1,7 +1,7 @@
 // 리엑트안의 컴포넌트를 { Component } 라는 이름으로 쓰겠다. 비구조화 할당
-import React, { Component } from "react"
+import React from "react";
 import ReactDOM from 'react-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 /* import {HashRouter} from 'react-router-dom';
 import Header from "./Header";
 import Body from "./Body";
