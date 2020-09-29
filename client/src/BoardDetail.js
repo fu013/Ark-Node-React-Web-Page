@@ -10,6 +10,7 @@ class BoardDetail extends Component {
     board: []
   };
 
+  // DOM이 Rendering 되기전에 실행되는 Method
   componentDidMount() {
     if (this.props.location.query !== undefined) {
       this.getDetail();
@@ -47,7 +48,7 @@ class BoardDetail extends Component {
     const marginBottom = {
       marginBottom: 5
     };
-    axios
+    axios // 비동기식으로 요청 보내는 엑시오스
       .post("http://localhost:9983/board/detail", send_param)
       //정상 수행
       .then(returnData => {
