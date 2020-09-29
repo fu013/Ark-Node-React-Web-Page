@@ -43,7 +43,7 @@ class BoardWriteForm extends Component {
     }
     
     if (this.props.location.query !== undefined) {
-      url = "http://localhost:8080/board/update";
+      url = "http://localhost:9983/board/update";
       send_param = {
         headers,
         "_id" : this.props.location.query._id,
@@ -51,7 +51,7 @@ class BoardWriteForm extends Component {
         "content": boardContent
       };
     } else {
-      url = "http://localhost:8080/board/write";
+      url = "http://localhost:9983/board/write";
       send_param = {
         headers,
         "_id" : $.cookie("login_id"),

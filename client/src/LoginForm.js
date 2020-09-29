@@ -60,7 +60,7 @@ class LoginForm extends Component {
       password: this.joinPw.value
     };
     axios
-      .post("http://localhost:8080/member/join", send_param)
+      .post("http://localhost:9983/member/join", send_param)
       //정상 수행
       .then(returnData => {
         if (returnData.data.message) {
@@ -103,7 +103,7 @@ class LoginForm extends Component {
       password: this.loginPw.value
     };
     axios
-      .post("http://localhost:8080/member/login", send_param)
+      .post("http://localhost:9983/member/login", send_param)
       //정상 수행
       .then(returnData => {
         if (returnData.data.message) {

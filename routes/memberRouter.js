@@ -39,6 +39,64 @@ router.post("/login", async (req, res) => {
         console.log(err);
         res.json({ message: false });
     }
-})
+});
+
+// 로그아웃
+router.get("/logout", (req, res) => {
+    console.log("/logout" + req.sessionID);
+    req.session.destroy(() => {
+        res.json({ message: true });
+    });
+});
+
+// 회원탈퇴
+router.post("/delete", async(req, res) => {
+    try {
+        await User.remove({
+            _id: req.body._id
+        });
+        res.json({ message: true });
+    } catch (err) {
+        console.log(err);
+        res.json({ message: false });
+    }
+});
+
+// 회원수정
+router.post("/update", async (req, res) => {
+    try {
+        await User.update({
+            _id: req.body._id,
+            name: req.body.name,
+            age: req.body.age,
+            married: req.body.married
+        });
+        res.json({ message: true });
+    } catch (err) {
+        console.log(err);
+        res.json({ message: false });
+    }
+});
+
+router.post("/add", async (req, res) => {
+    try {
+        const user = new User(req.body);
+        await user.save();
+        res.json({ message: true });
+    } catch (err) {
+        console.log(err);
+        res.json({ message: false });
+    }
+});
+
+router.post("/getAllMember", async (req, res) => {
+    try {
+        const user = await User.find({});
+        res.json({ message: user });
+    } catch (err) {
+        console.log(err);
+        res.json({ messsage: false });
+    }
+});
 
 module.exports = router;

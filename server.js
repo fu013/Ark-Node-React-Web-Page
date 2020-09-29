@@ -14,7 +14,7 @@ const connect = require("./schemas");
 connect();
 
 // 노드서버-세션 참조
-/* const session = require("express-session"); */
+const session = require("express-session");
 
 // 서버 실행시 default 파일을 app.js 로 설정, 주소 참조
 /* const { default: App } = require('./client/src/App'); */
@@ -26,17 +26,17 @@ const corsOptions = {
 }
 
 // 노드서버의 세션 세팅, https는 붙지 못함
-/* app.use({
+app.use(
     session({
         resave: false,
         saveUninitialized: true,
         secret: "scarlet",
         cookie: {
-            httpOnly: true,
-            secure: false
+        httpOnly: true,
+        secure: false
         }
     })
-}); */
+);
 
 //extened true를 하면 추가적인 배열까지 받아올 수 있다.
 app.use(bodyParser.json());
