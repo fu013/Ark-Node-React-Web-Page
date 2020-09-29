@@ -85,4 +85,4 @@ const userSchema = new mongoose.Schema({
   정의된 Schema를 MongoDB에서 객체처럼 사용할 수 있도록 model() 함수로 JS 객체표기 데이터들을 DB에 보낼때 Compile 해줌.
   세번째 인자로 컬렉션 이름을 주면 강제 필터링에 의한 개명을 방지할 수 있다. 
 */
-module.exports = mongoose.model('User', userSchema, 'User');
+module.exports = mongoose.model('Users', userSchema, 'Users');

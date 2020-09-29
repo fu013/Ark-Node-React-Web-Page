@@ -29,6 +29,6 @@ module.exports = () => {
         connect();
     });
     // DB 스키마 참조하는 부분
-    /* require("./user");
-    require("./board"); */
+    require("./user");
+    require("./board");
 }
