@@ -4,7 +4,7 @@ import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
 axios.defaults.withCredentials = true;
-const headers = { withCredentials: true };
+// const headers = { withCredentials: true };
 
 const MypageForm = () => {
   const divStyle = {
