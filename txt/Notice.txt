@@ -1,3 +1,6 @@
 깃 용량 초과(기본 100MB 제한)때문에 모듈이 깃에 업로드가 제대로 안되있어서 
 클론할때마다 필수적으로 server 모듈 재설치
 client 모듈 설치는 꼭 해줘야함.
+
+바디에서 register 참조하면 그냥 NavLink랑 맞춰주기만하면 바디에서 exact path로
+register에 resultForm도 참조가능

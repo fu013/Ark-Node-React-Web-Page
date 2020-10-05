@@ -22,6 +22,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.11",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.0"
   },
   "scripts": {
@@ -45,5 +46,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:9983/"
+  "proxy": "http://localhost:9983/",
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.5"
+  }
 }

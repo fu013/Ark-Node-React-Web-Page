@@ -14,10 +14,10 @@ class Body extends Component {
     function getResultForm() {
       // console.log($.cookie("login_id"));
       if ($.cookie("login_id")) {
-        resultForm = <Route exact path="/" component={BoardForm}></Route>;
+        resultForm = <Route exact path="/Register" component={BoardForm}></Route>;
         return resultForm;
       } else {
-        resultForm = <Route exact path="/" component={LoginForm}></Route>;
+        resultForm = <Route exact path="/Register" component={LoginForm}></Route>;
         return resultForm;
       }
     }
