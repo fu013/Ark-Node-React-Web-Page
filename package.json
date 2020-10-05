@@ -23,9 +23,14 @@
         "express": "^4.17.1",
         "express-session": "^1.17.1",
         "mongoose": "^5.10.7",
-        "session": "^0.1.0"
+        "nodemon": "^2.0.4",
+        "session": "^0.1.0",
+        "styled-components": "^5.2.0",
+        "webpack": "^4.44.2",
+        "webpack-dev-server": "^3.11.0",
+        "yarn": "^1.22.10"
     },
     "devDependencies": {
-        "concurrently": "^4.0.1"
+        "concurrently": "^4.1.2"
     }
 }

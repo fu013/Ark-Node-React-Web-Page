@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const session = require("express-session");
 const connect = require("./schemas");
-const port = 9983;
+const port = process.env.PORT || 9983; 
 
 connect();
 
