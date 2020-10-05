@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
+import styled from 'styled-components';
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -85,6 +86,7 @@ class Header extends Component {
       lineHeight: "60px",
       fontSize: "1.5em",
       border: "none",
+      verticalAlign: "top"
     };
     const MenubuttonLastStyle = {
       margin: "0px 0px 0px 10px",
@@ -94,6 +96,25 @@ class Header extends Component {
       lineHeight: "60px",
       fontSize: "1.5em",
       border: "none",
+    };
+    
+    /* Styled Components */
+    const Menubutton = styled.button`
+      margin: 0px 100px 0px 10px;
+      background: none;
+      color: black;
+      padding: 20px;
+      line-height: 60px;
+      font-size: 1.5em;
+      border: none;
+      vertical-align: top;
+      &:hover {
+        color: #ed1212;
+        cursor: pointer;
+      }
+    `
+    const last = {
+      margin: "0px 0px 0px 10px"
     };
 
     return (
@@ -121,39 +142,39 @@ class Header extends Component {
 
             {/* MENU */}
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary" onMouseOver={this.toggleHover} onMouseOut={this.toggleHover}>
+              <Menubutton variant="primary" onMouseOver={this.toggleHover} onMouseOut={this.toggleHover}>
                 Notice
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary">
+              <Menubutton variant="primary">
                 Servers
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary">
+              <Menubutton variant="primary">
                 Support
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary">
+              <Menubutton variant="primary">
                 Community
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary">
+              <Menubutton variant="primary">
                 Community
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} variant="primary">
+              <Menubutton variant="primary">
                 LiveChat
-              </Button>
+              </Menubutton>
             </NavLink>
             <NavLink to="/">
-              <Button style={MenubuttonStyle} style={MenubuttonLastStyle} variant="primary">
+              <Menubutton style={last} variant="primary">
                 Store
-              </Button>
+              </Menubutton>
             </NavLink>
           </Navbar.Collapse>
 
