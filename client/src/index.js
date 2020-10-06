@@ -1,17 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import {HashRouter} from 'react-router-dom';
+import {HashRouter, Route, Switch, Redirect} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Header";
-import Body from "./Body";
-import styled from 'styled-components';
-import Footer from "./Footer";
+import Home from "./Home";
+import LoginForm from "./LoginForm";
 
 ReactDOM.render(
   <HashRouter>
-    <Header/>
-    <Body/>
-    <Footer/>
+    <div className="main">
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/LoginForm" component={LoginForm} />
+      </Switch>
+    </div>
   </HashRouter>,
   document.querySelector("#container")
 );
