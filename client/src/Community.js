@@ -16,6 +16,9 @@ class Community extends Component {
       if ($.cookie("login_id")) {
         resultForm = <Route exact path="/Community" component={BoardForm}></Route>;
         return resultForm;
+      } else {
+        alert("로그인이 필요한 서비스입니다.");
+        window.location.href = 'http://localhost:3000/#/LoginForm';
       }
     }
     getResultForm();
@@ -25,18 +28,19 @@ class Community extends Component {
       padding: "0",
       margin: "0",
       width: "100%",
-      margin: "0 auto"
+      minWidth: "1600px"
     };
     const NavbarTitle = {
       display: "block"
     };
     const NewWriteButton = {
       position: "absolute",
-      right: "50px"
+      right: "200px"
     };
     const H1 = styled.h1 `{
       text-align: center;
       margin-top: 20px;
+      min-width: 1600px;
     }`
 
     return (

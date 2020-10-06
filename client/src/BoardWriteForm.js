@@ -81,10 +81,11 @@ class BoardWriteForm extends Component {
       });
   };
 
-  onEditorChange = ( event, editor ) => {
+  onEditorChange = (event, editor) => {
     this.setState({
       data: editor.getData()
     });
+    console.log("setState 실행");
   }
 
   render() {
@@ -97,6 +98,7 @@ class BoardWriteForm extends Component {
     };
     const Section = styled.div `{
       margin: 50px;
+      min-width: 1600px;
     }`
 
     return (
@@ -107,7 +109,7 @@ class BoardWriteForm extends Component {
           <Form.Control
             type="text"
             style={titleStyle}
-            placeholder="글 제목"
+            placeholder="Title"
             ref={ref => (this.boardTitle = ref)}
           />
           <CKEditor

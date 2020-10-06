@@ -1,21 +1,74 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import { FaTwitter, FaYoutube, FaDiscord, FaFacebookF, FaInstagramSquare } from 'react-icons/fa';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { SiGnuprivacyguard } from 'react-icons/si';
+import { SiMinutemailer } from 'react-icons/si';
 
 class Footer extends Component{
     render(){
         const Footer = styled.div`
+            min-width: 1600px;
             height: 100px;
             margin-top: 50px;
             border-top: 1px solid black;
+            position: relative;
         `
         const H1 = styled.h1`
             text-align: center;
             line-height: 100px;
         `
+        const IconWrapper = styled.h3`{
+            position: absolute;
+            margin-right: 10px;
+            right: 10px;
+            top: 30px;
+        }`
+        const IconSizeStyle = {
+            fontSize: "1.5em",
+            marginRight: "20"
+        };
+        const Last = {
+            marginRight: "0"
+        };
+        const FooterMenu = {
+            position: "relative",
+            fontSize: "1em",
+            top: "40px",
+            textAlign: "center",
+            listStyleType: "none"
+        };
+        const FooterMenuLi = {
+            marginRight: "100px",
+            display: "inline-block",
+            fontSize: "1.2em",
+            fontWeight: "700"
+        };
+        const FooterMenuLiLast = {
+            marginRight: "0",
+            display: "inline-block",
+            fontSize: "1.2em",
+            fontWeight: "700"
+        };
+        const IconSizeStyle2 = {
+            fontSize: "1em",
+            marginRight: "5"
+        };
 
         return(
             <Footer>
-                <H1>FOOTER</H1>
+                <ul style={FooterMenu}>
+                    <li style={FooterMenuLi}><SiGnuprivacyguard style={IconSizeStyle2}/>Privacy Policy</li>
+                    <li style={FooterMenuLi}><AiOutlineLoading3Quarters style={IconSizeStyle2}/>2020~ing ScarletWEB</li>
+                    <li style={FooterMenuLiLast}><SiMinutemailer style={IconSizeStyle2}/>Contact Me</li>
+                </ul>
+                <IconWrapper>
+                    <FaTwitter style={IconSizeStyle}/>
+                    <FaYoutube style={IconSizeStyle}/>
+                    <FaDiscord style={IconSizeStyle}/>
+                    <FaFacebookF style={IconSizeStyle}/>
+                    <FaInstagramSquare style={IconSizeStyle} style={Last}/>
+                </IconWrapper>
             </Footer>
         )
     }

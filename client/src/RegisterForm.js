@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
-import $ from "jquery";
 import {} from "jquery.cookie";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -59,6 +58,7 @@ class RegisterForm extends Component {
           .then(returnData => {
             if (returnData.data.message) {
               alert(returnData.data.message);
+              window.location.href = 'http://localhost:3000/#/';
               //이메일 중복 체크
               if (returnData.data.dupYn === "1") {
                 this.joinEmail.value = "";
@@ -70,6 +70,7 @@ class RegisterForm extends Component {
               }
             } else {
               alert("회원가입 실패");
+              window.location.href = 'http://localhost:3000/#/';
             }
           })
           //에러

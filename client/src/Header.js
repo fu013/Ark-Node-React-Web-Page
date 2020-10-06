@@ -68,24 +68,31 @@ class Header extends Component {
     const ONlog = {
       display: this.state.logoutDisplay,
       margin: "0px 5px 0px 10px",
-      background: "none"
+      background: "none",
+      color: "black",
+      fontWeight: "400",
+      border: "1px solid black"
     };
     const OFFlog = {
       display: this.state.loginDisplay,
       margin: "0px 5px 0px 10px",
-      background: "none"
+      background: "none",
+      color: "black",
+      fontWeight: "400",
+      border: "1px solid black"
     }
     const titleStyle = {
       display: "block",
       width: "100%",
       textAlign: "center",
       position: "absolute",
-      background: "black",
-      color: "white",
+      background: "white",
+      color: "black",
       height: "100px",
       lineHeight: "85px",
       fontSize: "40px",
-      top: "0"
+      top: "0",
+      borderBottom: "1px solid black"
     };
     const MenuWrapper = {
       marginTop: "100px",
@@ -105,16 +112,19 @@ class Header extends Component {
       border: none;
       vertical-align: top;
       &:hover {
-        color: #ed1212;
+        color: cornflowerblue;
         cursor: pointer;
       }
     `
     const last = {
       margin: "0px 0px 0px 10px"
     };
+    const divStyle = {
+      minWidth: "1600px"
+    };
 
     return (
-      <div>
+      <div style={divStyle}>
         <Navbar style={NavbarStyle} bg="white">
           <Navbar.Brand href="/" style={titleStyle}>Scarlet WEB Server</Navbar.Brand>
           <Navbar.Toggle />
@@ -123,24 +133,24 @@ class Header extends Component {
 
             <NavLink to="/LoginForm">
               <Button style={OFFlog} variant="primary">
-                로그인
+                LogIn
               </Button>
             </NavLink>
 
             <NavLink to="/RegisterForm">
               <Button style={OFFlog} variant="primary">
-                회원가입
+                GetAccount
               </Button>
             </NavLink>
 
             <NavLink to="/MypageForm">
               <Button style={ONlog} variant="primary">
-                회원정보
+                Profile
               </Button>
             </NavLink>
 
             <Button style={ONlog} onClick={this.logout} variant="primary">
-              로그아웃
+              LogOut
             </Button>
 
           </Navbar.Collapse>
@@ -153,7 +163,7 @@ class Header extends Component {
 
             {/* MENU */}
             <NavLink to="/notice">
-              <Menubutton variant="primary" onMouseOver={this.toggleHover} onMouseOut={this.toggleHover}>
+              <Menubutton variant="primary">
                 Notice
               </Menubutton>
             </NavLink>

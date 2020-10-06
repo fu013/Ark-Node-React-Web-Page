@@ -14,6 +14,9 @@ class Body extends Component {
       background-repeat: no-repeat;
       background-size: 100% 100%;
     `
+    const divStyle = {
+      minWidth: "1600px"
+    };
     const ItemSecond = {
       backgroundImage: "url('./img/2.jpg')"
     };
@@ -29,7 +32,7 @@ class Body extends Component {
       slidesToScroll: 1 // 한번 스크롤시 몇장의 슬라이드를 넘길지
     };
     return (
-      <div>
+      <div style={divStyle}>
         <Slider {...settings}>
           <div>
             <Item>{/* Slider Img 1 */}</Item>

@@ -82,7 +82,10 @@ class BoardForm extends Component {
 
   render() {
     const divStyle = {
-      margin: 50
+      margin: "50px auto",
+      minWidth: "1600px",
+      boxSizing: "border-box",
+      padding: "0 200px"
     };
 
     return (
@@ -91,8 +94,8 @@ class BoardForm extends Component {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>날짜</th>
-                <th>글 제목</th>
+                <th>Date</th>
+                <th>Title</th>
               </tr>
             </thead>
             <tbody>{this.state.boardList}</tbody>
