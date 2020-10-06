@@ -1,33 +1,46 @@
 import React, { Component } from "react";
-import LoginForm from "./LoginForm";
-import BoardForm from "./BoardForm";
-import BoardWriteForm from "./BoardWriteForm";
-import BoardDetail from "./BoardDetail";
-import MypageForm from "./MypageForm";
-import { Route } from "react-router-dom";
-import $ from "jquery";
-import {} from "jquery.cookie";
+import styled from 'styled-components';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class Body extends Component {
   render() {
-    let resultForm;
-    function getResultForm() {
-      // console.log($.cookie("login_id"));
-      if ($.cookie("login_id")) {
-        resultForm = <Route exact path="/Register" component={BoardForm}></Route>;
-        return resultForm;
-      } else {
-        resultForm = <Route exact path="/Register" component={LoginForm}></Route>;
-        return resultForm;
-      }
-    }
-    getResultForm();
+    const Item = styled.h3`
+      height: 600px;
+      background: lightgray;
+      position: relative;
+      background-image: url('./img/1.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    `
+    const ItemSecond = {
+      backgroundImage: "url('./img/2.jpg')"
+    };
+    const ItemThird = {
+      backgroundImage: "url('./img/3.jpg')"
+    };
+    // 슬릭 슬라이더 세팅
+    const settings = {
+      dots: true, // 캐러셀이미지가 몇번째인지 알려주는 점을 보여줄지 정한다.
+      infinite: true, // loop를 만들지(마지막 이미지-처음 이미지-중간 이미지들-마지막 이미지)
+      speed: 500, // 애미메이션의 속도, 단위는 milliseconds
+      slidesToShow: 1, // 한번에 몇개의 슬라이드를 보여줄 지
+      slidesToScroll: 1 // 한번 스크롤시 몇장의 슬라이드를 넘길지
+    };
     return (
       <div>
-        <Route path="/mypage" component={MypageForm}></Route>
-        <Route path="/boardWrite" component={BoardWriteForm}></Route>
-        <Route path="/board/detail" component={BoardDetail}></Route>
-        {resultForm}
+        <Slider {...settings}>
+          <div>
+            <Item>{/* Slider Img 1 */}</Item>
+          </div>
+          <div>
+            <Item style={ItemSecond}>{/* Slider Img 2 */}</Item>
+          </div>
+          <div>
+            <Item style={ItemThird}>{/* Slider Img 3 */}</Item>
+          </div>
+        </Slider>
       </div>
     );
   }

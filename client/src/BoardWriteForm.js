@@ -4,6 +4,9 @@ import { Button, Form} from "react-bootstrap";
 import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
+import Header from "./Header";
+import Footer from "./Footer";
+import styled from 'styled-components';
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -85,32 +88,37 @@ class BoardWriteForm extends Component {
   };
 
   render() {
-    const divStyle = {
-      margin: 50
-    };
     const titleStyle = {
-      marginBottom: 5
+      marginBottom: "5"
     };
     const buttonStyle = {
-      marginTop: 5
+      marginTop: "5",
+      backgroundColor: "cornflowerblue"
     };
+    const Section = styled.div `{
+      margin: 50px;
+    }`
 
     return (
-      <div style={divStyle} className="App">
-        <h2>글쓰기</h2>
-        <Form.Control
-          type="text"
-          style={titleStyle}
-          placeholder="글 제목"
-          ref={ref => (this.boardTitle = ref)}
-        />
-        <CKEditor
-          data={this.state.data}
-          onChange={this.onEditorChange}
-        ></CKEditor>
-        <Button style={buttonStyle} onClick={this.writeBoard} block>
-          저장하기
-        </Button>
+      <div className="App">
+        <Header/>
+        <Section>
+          <h2>글쓰기</h2>
+          <Form.Control
+            type="text"
+            style={titleStyle}
+            placeholder="글 제목"
+            ref={ref => (this.boardTitle = ref)}
+          />
+          <CKEditor
+            data={this.state.data}
+            onChange={this.onEditorChange}
+          ></CKEditor>
+          <Button style={buttonStyle} onClick={this.writeBoard} block>
+            저장하기
+          </Button>
+        </Section>
+        <Footer/>
       </div>
     );
   }

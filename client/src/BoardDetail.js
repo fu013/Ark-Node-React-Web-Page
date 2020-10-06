@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Table, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import Header from "./Header";
+import Footer from "./Footer";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -55,6 +57,7 @@ class BoardDetail extends Component {
         if (returnData.data.board[0]) {
           const board = (
             <div>
+              <Header/>
               <Table striped bordered hover>
                 <thead>
                   <tr>
@@ -96,6 +99,7 @@ class BoardDetail extends Component {
                   글 삭제
                 </Button>
               </div>
+              <Footer/>
             </div>
           );
           this.setState({
@@ -116,7 +120,7 @@ class BoardDetail extends Component {
     const divStyle = {
       margin: 50
     };
-    return <div style={divStyle}>{this.state.board}</div>;
+    return <div>{this.state.board}</div>;
   }
 }
 
