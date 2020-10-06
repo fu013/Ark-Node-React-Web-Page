@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import CKEditor from "ckeditor4-react";
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { Button, Form} from "react-bootstrap";
 import axios from "axios";
 import $ from "jquery";
@@ -39,7 +40,6 @@ class BoardWriteForm extends Component {
     if (boardTitle === undefined || boardTitle === "") {
       alert("글 제목을 입력 해주세요.");
       boardTitle.focus();
-      return;
     } else if (boardContent === undefined || boardContent === "") {
       alert("글 내용을 입력 해주세요.");
       boardContent.focus();
@@ -81,11 +81,11 @@ class BoardWriteForm extends Component {
       });
   };
 
-  onEditorChange = evt => {
+  onEditorChange = ( event, editor ) => {
     this.setState({
-      data: evt.editor.getData()
+      data: editor.getData()
     });
-  };
+  }
 
   render() {
     const titleStyle = {
@@ -111,9 +111,10 @@ class BoardWriteForm extends Component {
             ref={ref => (this.boardTitle = ref)}
           />
           <CKEditor
+            editor={ ClassicEditor }
             data={this.state.data}
             onChange={this.onEditorChange}
-          ></CKEditor>
+          />
           <Button style={buttonStyle} onClick={this.writeBoard} block>
             저장하기
           </Button>
