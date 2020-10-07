@@ -20,6 +20,14 @@ const JoinRoom = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
+  const connectButton = {
+    background: "black",
+    color: "white"
+  };
+  const chatRoomTitleStyle = {
+    fontSize: "40px",
+    fontWeight: "300"
+  };
   return (
     <div className="joinOuterContainer">
       <Header/>
@@ -29,7 +37,7 @@ const JoinRoom = () => {
         <div className="joinFormContainer" component={Paper}>
           <div className="joinFormBox">
             <div className="joinTitle">
-              <Typography component="h1" variant="h5">
+              <Typography component="h1" variant="h5" style={chatRoomTitleStyle}>
                 ScarletChat
               </Typography>
             </div>
@@ -72,6 +80,7 @@ const JoinRoom = () => {
                     variant="contained"
                     color="primary"
                     className="joinButton mt-20"
+                    style={connectButton}
                   >
                     Room Connect
                   </Button>

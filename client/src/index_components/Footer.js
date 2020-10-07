@@ -9,6 +9,8 @@ class Footer extends Component{
     render(){
         const Footer = styled.div`
             min-width: 1600px;
+            background-color: rgba(96, 94, 94, 1);
+            color: white;
             height: 100px;
             margin-top: 50px;
             border-top: 1px solid black;

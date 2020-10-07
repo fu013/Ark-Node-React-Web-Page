@@ -11,9 +11,14 @@ axios.defaults.withCredentials = true;
 
 const MypageForm = () => {
   const marginBottom = {
-    marginBottom : 5
+    marginBottom : 5,
+    background: "black",
+    color: "white"
   };
-  
+  const buttonStyle = {
+    background: "black",
+    color: "white"
+  };
   const Section = styled.div `{
     margin: 40px 200px 50px 200px;
     min-width: 1200px;
@@ -42,7 +47,7 @@ const MypageForm = () => {
             <Button variant="primary"  block style={marginBottom}>
             회원정보 수정
             </Button>
-            <Button variant="primary" block>
+            <Button variant="primary" block style={buttonStyle}>
             회원 탈퇴
             </Button>
           </Section>

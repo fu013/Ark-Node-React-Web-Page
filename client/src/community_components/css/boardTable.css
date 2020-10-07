@@ -1,0 +1,7 @@
+.table-dark {
+    color: black;
+    background-color: white;
+}
+.table td, .table th {
+    color: black;
+}

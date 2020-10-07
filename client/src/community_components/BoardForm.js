@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
+import "./css/boardTable.css";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -85,7 +86,8 @@ class BoardForm extends Component {
       margin: "50px auto",
       minWidth: "1600px",
       boxSizing: "border-box",
-      padding: "0 200px"
+      padding: "0 400px",
+      marginBottom: "80px"
     };
 
     return (

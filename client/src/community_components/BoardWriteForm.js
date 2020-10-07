@@ -8,7 +8,7 @@ import {} from "jquery.cookie";
 import Header from "../index_components/Header";
 import Footer from "../index_components/Footer";
 import styled from 'styled-components';
-import "./CKEditorCSS.css";
+import "./css/CKEditorCSS.css";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -95,18 +95,26 @@ class BoardWriteForm extends Component {
     };
     const buttonStyle = {
       marginTop: "5",
-      backgroundColor: "cornflowerblue"
+      backgroundColor: "white",
+      border: "1px solid black",
+      color: "black"
     };
     const Section = styled.div `{
-      margin: 50px;
+      box-sizing: border-box;
+      padding: 30px 500px;
       min-width: 1600px;
     }`
+    const ckeTitleStyle = {
+      textAlign: "center",
+      marginBottom: "30px",
+      fontWeight: "500"
+    };
 
     return (
       <div className="App">
         <Header/>
         <Section>
-          <h2>글쓰기</h2>
+          <h2 style={ckeTitleStyle}>New Posting</h2>
           <Form.Control
             type="text"
             style={titleStyle}

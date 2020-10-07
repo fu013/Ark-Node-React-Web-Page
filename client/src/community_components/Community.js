@@ -35,11 +35,11 @@ class Community extends Component {
       background: "none",
       border: "1px solid black",
       color: "black",
-      right: "200px"
+      right: "400px"
     };
     const H1 = styled.h1 `{
       text-align: center;
-      margin-top: 20px;
+      margin-top: 40px;
       min-width: 1600px;
       font-weight: 333;
     }`

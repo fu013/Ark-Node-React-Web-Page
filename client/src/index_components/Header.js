@@ -6,7 +6,8 @@ import $ from "jquery";
 import {} from "jquery.cookie";
 import styled from 'styled-components';
 import SplitText from 'react-pose-text';
-/* import { AnimeTest } from '../svg_components/AnimeTest.js'; */
+import "./css/hover.css";
+
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -117,6 +118,9 @@ class Header extends Component {
         color: cornflowerblue;
         cursor: pointer;
       }
+      &:focus {
+        outline: none;
+      }
     `
     const last = {
       margin: "0px 0px 0px 10px"
@@ -177,32 +181,32 @@ class Header extends Component {
 
             {/* MENU */}
             <NavLink to="/notice">
-              <Menubutton variant="primary">
+              <Menubutton className="hvr-float">
                 Notice
               </Menubutton>
             </NavLink>
             <NavLink to="/servers">
-              <Menubutton variant="primary">
+              <Menubutton className="hvr-float">
                 Servers
               </Menubutton>
             </NavLink>
             <NavLink to="/support">
-              <Menubutton variant="primary">
+              <Menubutton className="hvr-float">
                 Support
               </Menubutton>
             </NavLink>
             <NavLink to="/community">
-              <Menubutton variant="primary">
+              <Menubutton className="hvr-float">
                 Community
               </Menubutton>
             </NavLink>
             <NavLink to="/ChatRoom">
-              <Menubutton variant="primary">
+              <Menubutton className="hvr-float">
                 LiveChat
               </Menubutton>
             </NavLink>
             <NavLink to="/store">
-              <Menubutton style={last} variant="primary">
+              <Menubutton style={last} className="hvr-float">
                 Store
               </Menubutton>
             </NavLink>

@@ -86,7 +86,7 @@ const Chat = ({ location }) => {
                   ScarletChat
                 </Typography>
                 <Button color="inherit" href="/#/">
-                  홈페이지로 나가기
+                  go index
                 </Button>
               </Toolbar>
             </AppBar>

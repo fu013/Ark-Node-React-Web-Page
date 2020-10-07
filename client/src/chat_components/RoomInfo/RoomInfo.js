@@ -17,7 +17,7 @@ function RoomInfo({ room }) {
           href="/#/ChatRoom"
           color="inherit"
         >
-          나가기
+          back
         </Button>
       </div>
     </div>

@@ -7,18 +7,39 @@ const Message = ({ message: { text, user }, name }) => {
   if (user === trimmedName) {
     isSentByCurrentUser = true;
   }
+  const startMessageUserNameStyle = {
+    background: "orange",
+    color: "white",
+    fontSize: "20px",
+    textTransform: "uppercase"
+  };
+  const startMessageUserTextStyle = {
+    textTransform: "uppercase",
+    borderBottom: "1px solid black",
+    boxSizing: "border-box",
+    padding: "5px",
+  };
+
+  const userNameStyle = {
+    background: "cornflowerblue",
+    color: "white",
+    fontSize: "15px",
+  };
+  const userTextStyle = {
+    fontWegiht: "500"
+  };
   return isSentByCurrentUser ? (
     <div className="messageContainer end">
       <div className="messageBox backgroundLight">
         <p className="messageText black">{text}</p>
       </div>
-      <p className="sentMessage pl-10">{trimmedName}</p>
+      <p className="sentMessage pl-10" style={userNameStyle}>{trimmedName}</p>
     </div>
   ) : (
     <div className="messageContainer start">
-      <p className="sentMessage pr-10">{user}</p>
-      <div className="messageBox backgroundLight">
-        <p className="messageText black">{text}</p>
+      <p className="sentMessage pr-10" style={startMessageUserNameStyle}>{user}</p>
+      <div className="messageBox backgroundLight" style={userTextStyle}>
+        <p className="messageText black" style={startMessageUserTextStyle}>{text}</p>
       </div>
     </div>
   );
