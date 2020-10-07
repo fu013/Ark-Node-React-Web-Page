@@ -12,6 +12,7 @@ import BoardWriteForm from "./community_components/BoardWriteForm";
 import BoardDetail from "./community_components/BoardDetail";
 import JoinRoom from "./chat_components/JoinRoom/JoinRoom";
 import Chat from "./chat_components/Chat/Chat";
+
 ReactDOM.render(
   <HashRouter>
     <div className="main">

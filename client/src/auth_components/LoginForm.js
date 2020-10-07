@@ -61,10 +61,12 @@ class LoginForm extends Component {
   };
   render() {
     const formStyle = {
-      margin: 50
+      margin: "50px 50px 70px 50px"
     };
     const buttonStyle = {
-      marginTop: 10
+      marginTop: 10,
+      background: "black",
+      color: "white"
     };
     const Section = styled.div `{
       margin: 50px 400px 0 400px;

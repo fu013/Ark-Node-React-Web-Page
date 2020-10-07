@@ -14,11 +14,17 @@ import Typography from "@material-ui/core/Typography";
 
 import Header from "../../index_components/Header";
 import Footer from "../../index_components/Footer";
-import styled from 'styled-components';
+import $ from "jquery";
+import {} from "jquery.cookie";
 
 const JoinRoom = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+
+  if (!$.cookie("login_id")) {
+    alert("로그인이 필요한 서비스입니다.");
+    window.location.href = 'http://localhost:3000/#/LoginForm';
+  }
 
   const connectButton = {
     background: "black",
