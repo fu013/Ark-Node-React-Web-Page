@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Button, Image } from "react-bootstrap";
+import { Navbar, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import $ from "jquery";

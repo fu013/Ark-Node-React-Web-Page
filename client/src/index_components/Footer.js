@@ -14,10 +14,6 @@ class Footer extends Component{
             border-top: 1px solid black;
             position: relative;
         `
-        const H1 = styled.h1`
-            text-align: center;
-            line-height: 100px;
-        `
         const IconWrapper = styled.h3`{
             position: absolute;
             margin-right: 10px;

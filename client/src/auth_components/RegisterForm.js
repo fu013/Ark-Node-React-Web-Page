@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import {} from "jquery.cookie";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../index_components/Header";
+import Footer from "../index_components/Footer";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 

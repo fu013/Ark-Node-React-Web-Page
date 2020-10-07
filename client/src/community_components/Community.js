@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import BoardForm from "./BoardForm";
-import { Navbar, Button, Image } from "react-bootstrap";
+import { Navbar, Button } from "react-bootstrap";
 import { NavLink, Route } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../index_components/Header";
+import Footer from "../index_components/Footer";
 import styled from 'styled-components';
 import $ from "jquery";
 import {} from "jquery.cookie";
@@ -29,9 +29,6 @@ class Community extends Component {
       margin: "0",
       width: "100%",
       minWidth: "1600px"
-    };
-    const NavbarTitle = {
-      display: "block"
     };
     const NewWriteButton = {
       position: "absolute",

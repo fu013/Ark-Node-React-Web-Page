@@ -17,19 +17,19 @@ module.exports = () => {
             },
             error => {
                 if (error) {
-                    console.log("몽고디비 연결 에러", error);
+                    console.log("Errors Occur during MongoDB Connection", error);
                 } else {
-                    console.log("몽고디비 연결 성공");
+                    console.log("MongoDB Connection Successed");
                 }
             }
         );
     };
     connect();
     mongoose.connection.on("error", error => {
-        console.log("몽고디비 연결 에러", error);
+        console.log("Errors Occur during MongoDB Connection", error);
     });
     mongoose.connection.on("disconnected", () => {
-        console.log("몽고디비 연결이 끊겼습니다. 연결을 재시도 합니다.");
+        console.log("MongoDB Connection Disconnected, Reconnecting...");
         connect();
     });
     // DB 스키마 참조하는 부분

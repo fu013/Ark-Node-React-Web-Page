@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Table, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../index_components/Header";
+import Footer from "../index_components/Footer";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -117,9 +117,6 @@ class BoardDetail extends Component {
 
   //onClick={this.getBoard.bind(null,this.props._id)}
   render() {
-    const divStyle = {
-      margin: 50
-    };
     return <div>{this.state.board}</div>;
   }
 }

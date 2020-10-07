@@ -5,8 +5,8 @@ import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
 import styled from 'styled-components';
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../index_components/Header";
+import Footer from "../index_components/Footer";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
