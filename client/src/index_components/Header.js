@@ -5,6 +5,8 @@ import axios from "axios";
 import $ from "jquery";
 import {} from "jquery.cookie";
 import styled from 'styled-components';
+import SplitText from 'react-pose-text';
+/* import { AnimeTest } from '../svg_components/AnimeTest.js'; */
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 
@@ -122,11 +124,23 @@ class Header extends Component {
     const divStyle = {
       minWidth: "1600px"
     };
+    const charPoses = {
+      exit: { opacity: 0, y: 20 },
+      enter: {
+        opacity: 1,
+        y: 0,
+        delay: ({ charIndex }) => charIndex * 30
+      }
+    };
 
     return (
       <div style={divStyle}>
         <Navbar style={NavbarStyle} bg="white">
-          <Navbar.Brand href="/" style={titleStyle}>Scarlet WEB Server</Navbar.Brand>
+          <Navbar.Brand href="/" style={titleStyle}>
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+                Scarlet WEB Server
+            </SplitText>
+          </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse style={LogWrapStyle}>
             {/* 로그스타일 */}

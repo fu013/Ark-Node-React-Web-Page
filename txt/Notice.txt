@@ -13,3 +13,19 @@ register에 resultForm도 참조가능
 
 
 2. ChatRoom Message 안보이는 현상 수정
+
+3. 슬라이더 백업
+
+      <div style={divStyle}>
+        <Slider {...settings}>
+          <div>
+            <Item>{/* Slider Img 1 */}</Item>
+          </div>
+          <div>
+            <Item style={ItemSecond}>{/* Slider Img 2 */}</Item>
+          </div>
+          <div>
+            <Item style={ItemThird}>{/* Slider Img 3 */}</Item>
+          </div>
+        </Slider>
+      </div>
