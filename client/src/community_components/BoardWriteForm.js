@@ -8,6 +8,7 @@ import {} from "jquery.cookie";
 import Header from "../index_components/Header";
 import Footer from "../index_components/Footer";
 import styled from 'styled-components';
+import "./CKEditorCSS.css";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
 

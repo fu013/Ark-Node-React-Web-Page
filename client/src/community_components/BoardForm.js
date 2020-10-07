@@ -91,7 +91,7 @@ class BoardForm extends Component {
     return (
       <div>
         <div style={divStyle}>
-          <Table striped bordered hover>
+          <Table striped bordered hover variant="dark" size="sm" responsive="md">
             <thead>
               <tr>
                 <th>Date</th>
