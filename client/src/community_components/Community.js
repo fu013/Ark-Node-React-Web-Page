@@ -32,12 +32,16 @@ class Community extends Component {
     };
     const NewWriteButton = {
       position: "absolute",
+      background: "none",
+      border: "1px solid black",
+      color: "black",
       right: "200px"
     };
     const H1 = styled.h1 `{
       text-align: center;
       margin-top: 20px;
       min-width: 1600px;
+      font-weight: 333;
     }`
 
     return (

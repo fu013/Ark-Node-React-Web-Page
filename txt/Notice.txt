@@ -4,3 +4,12 @@ client 모듈 설치는 꼭 해줘야함.
 
 바디에서 register 참조하면 그냥 NavLink랑 맞춰주기만하면 바디에서 exact path로
 register에 resultForm도 참조가능
+
+2020-10-07 수
+
+작업 순서 
+
+1. SVG, 홈페이지 타이틀에 Line Drawing Animation 추가
+
+
+2. ChatRoom Message 안보이는 현상 수정

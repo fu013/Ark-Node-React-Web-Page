@@ -12,24 +12,25 @@ import Paper from "@material-ui/core/Paper";
 // import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 
+import Header from "../../index_components/Header";
+import Footer from "../../index_components/Footer";
+import styled from 'styled-components';
+
 const JoinRoom = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
 
   return (
     <div className="joinOuterContainer">
+      <Header/>
       <div className="joinInnerContainer">
         <div className="joinImageContainer">
-          <img
-            className="joinImage"
-            src="https://source.unsplash.com/800x600/?lama"
-          />
         </div>
         <div className="joinFormContainer" component={Paper}>
           <div className="joinFormBox">
             <div className="joinTitle">
               <Typography component="h1" variant="h5">
-                LamaChat
+                ScarletChat
               </Typography>
             </div>
             <form className="joinForm" noValidate>
@@ -62,7 +63,7 @@ const JoinRoom = () => {
                 <Link
                   className="joinButtonLink"
                   onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-                  to={`/lamaChat/chat?name=${name}&room=${room}`}
+                  to={`/ChatRoom/chat?name=${name}&room=${room}`}
                   // href={`/chat?name=${name}&room=${room}`}
                 >
                   <Button
@@ -72,7 +73,7 @@ const JoinRoom = () => {
                     color="primary"
                     className="joinButton mt-20"
                   >
-                    Sign In
+                    Room Connect
                   </Button>
                 </Link>
               </div>
@@ -80,6 +81,7 @@ const JoinRoom = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

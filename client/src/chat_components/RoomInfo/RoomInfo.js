@@ -14,10 +14,10 @@ function RoomInfo({ room }) {
           className="infoButton"
           // variant="contained"
           variant="raised"
-          href="/lamaChat"
+          href="/#/ChatRoom"
           color="inherit"
         >
-          close
+          나가기
         </Button>
       </div>
     </div>

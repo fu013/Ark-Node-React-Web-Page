@@ -107,6 +107,8 @@ app.use("/chat", require("./routes/chatRouter"));
 app.use("/member", require("./routes/memberRouter"));
 app.use("/board", require("./routes/boardRouter"));
 
-app.listen(port, () => {
+
+// Socket과 http 서버를 같이쓰기위해 app.listen이 아니라 server.listen 으로 동시 연결
+server.listen(port, () => {
   console.log(`listen on port ${port}...`);
 });

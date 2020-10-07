@@ -182,7 +182,7 @@ class Header extends Component {
                 Community
               </Menubutton>
             </NavLink>
-            <NavLink to="/liveChat">
+            <NavLink to="/ChatRoom">
               <Menubutton variant="primary">
                 LiveChat
               </Menubutton>

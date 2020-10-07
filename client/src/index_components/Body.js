@@ -10,7 +10,7 @@ class Body extends Component {
       height: 600px;
       background: lightgray;
       position: relative;
-      background-image: url('./img/1.jpg');
+      background-image: url('https://source.unsplash.com/1600x600/?cat');
       background-repeat: no-repeat;
       background-size: 100% 100%;
     `
@@ -18,10 +18,10 @@ class Body extends Component {
       minWidth: "1600px"
     };
     const ItemSecond = {
-      backgroundImage: "url('./img/2.jpg')"
+      backgroundImage: "url('https://source.unsplash.com/1600x600/?dog')"
     };
     const ItemThird = {
-      backgroundImage: "url('./img/3.jpg')"
+      backgroundImage: "url('https://source.unsplash.com/1600x600/?raccoon')"
     };
     // 슬릭 슬라이더 세팅
     const settings = {

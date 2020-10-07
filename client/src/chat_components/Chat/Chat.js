@@ -25,7 +25,7 @@ const Chat = ({ location }) => {
 
   const [users, setUsers] = useState("");
 
-  const ENDPOINT = "https://lamachat.herokuapp.com/";
+  const ENDPOINT = "http://localhost:3000/#/ChatRoom";
 
   useEffect(() => {
     // query-string middleware의 사용
@@ -51,11 +51,6 @@ const Chat = ({ location }) => {
       }
     });
 
-    // return () => {
-    //   socket.emit("disconnect");
-
-    //   socket.off();
-    // };
   }, [ENDPOINT, location.search]); // 한번만 부른다 // 불필요한 사이드 이펙트를 줄인다
 
   useEffect(() => {
@@ -80,38 +75,35 @@ const Chat = ({ location }) => {
   console.log(message, messages);
   console.log(users, "users");
 
-  // return <h1>Chat</h1>;
-  // 1.roominfo
-  // 2.messages
-  // 3.input
+
   return (
-    <div className="chatOuterContainer">
-      <div className="chatInnerContainer">
-        <div className="appbar">
-          <AppBar color="primary">
-            <Toolbar className="toolBar">
-              <Typography variant="h4" color="inherit" noWrap>
-                LamaChat
-              </Typography>
-              <Button color="inherit" href="/lamaChat">
-                close
-              </Button>
-            </Toolbar>
-          </AppBar>
-        </div>
-        <div className="chatScreen">
-          <Paper elevation={5} className="chatScreenPaper">
-            <RoomInfo room={room} />
-            <Messages messages={messages} name={name} />
-            <Input
-              message={message}
-              setMessage={setMessage}
-              sendMessage={sendMessage}
-            />
-          </Paper>
+      <div className="chatOuterContainer">
+        <div className="chatInnerContainer">
+          <div className="appbar">
+            <AppBar color="primary">
+              <Toolbar className="toolBar">
+                <Typography variant="h4" color="inherit" noWrap>
+                  ScarletChat
+                </Typography>
+                <Button color="inherit" href="/#/">
+                  홈페이지로 나가기
+                </Button>
+              </Toolbar>
+            </AppBar>
+          </div>
+          <div className="chatScreen">
+            <Paper elevation={5} className="chatScreenPaper">
+              <RoomInfo room={room} />
+              <Messages messages={messages} name={name} />
+              <Input
+                message={message}
+                setMessage={setMessage}
+                sendMessage={sendMessage}
+              />
+            </Paper>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
