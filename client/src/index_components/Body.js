@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./css/slick.css"
+import DiscordWidget from "../widget_components/Discord";
+import Video from "../widget_components/Video"
 
 class Body extends Component {
   render() {
@@ -14,6 +16,9 @@ class Body extends Component {
       background-image: url('https://source.unsplash.com/1600x600/?cat');
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      &:focus {
+        outline: none;
+      }
     `
     const divStyle = {
       minWidth: "1600px"
@@ -24,6 +29,11 @@ class Body extends Component {
     const ItemThird = {
       backgroundImage: "url('https://source.unsplash.com/1600x600/?raccoon')"
     };
+    const WidgetWrapper = styled.div `{
+      width: 1300px;
+      overflow: hidden;
+      margin: 0 auto;
+    }`
     // 슬릭 슬라이더 세팅
     const settings = {
       dots: true, // 캐러셀이미지가 몇번째인지 알려주는 점을 보여줄지 정한다.
@@ -46,6 +56,9 @@ class Body extends Component {
             <Item style={ItemThird}>{/* Slider Img 3 */}</Item>
           </div>
         </Slider>
+        <WidgetWrapper>
+          <DiscordWidget/><Video/>
+        </WidgetWrapper>
       </div>
     );
   }

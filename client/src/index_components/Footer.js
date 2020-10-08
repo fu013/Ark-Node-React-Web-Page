@@ -15,6 +15,7 @@ class Footer extends Component{
             margin-top: 50px;
             border-top: 1px solid black;
             position: relative;
+            clear: both;
         `
         const IconWrapper = styled.h3`{
             position: absolute;
