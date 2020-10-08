@@ -11,32 +11,33 @@ import styled from 'styled-components';
 import "./css/CKEditorCSS.css";
 axios.defaults.withCredentials = true;
 const headers = { withCredentials: true };
+let CKEdata;
 
 class BoardWriteForm extends Component {
-  state = {
+/*   state = {
     data: ""
-  };
+  }; */
 
   componentDidMount() {
     if (this.props.location.query !== undefined) {
       this.boardTitle.value = this.props.location.query.title;
     }
   }
-
+/* 
   componentWillMount(){
     if (this.props.location.query !== undefined) {
       this.setState({
         data: this.props.location.query.content
       });
     }
-  }
-
+  } */
+  
   writeBoard = () => {
     let url;
     let send_param;
 
     const boardTitle = this.boardTitle.value;
-    const boardContent = this.state.data;
+    const boardContent = CKEdata;
 
     if (boardTitle === undefined || boardTitle === "") {
       alert("글 제목을 입력 해주세요.");
@@ -82,12 +83,6 @@ class BoardWriteForm extends Component {
       });
   };
 
-  onEditorChange = (event, editor) => {
-    this.setState({
-      data: editor.getData()
-    });
-    console.log("setState 실행");
-  }
 
   render() {
     const titleStyle = {
@@ -122,9 +117,11 @@ class BoardWriteForm extends Component {
             ref={ref => (this.boardTitle = ref)}
           />
           <CKEditor
-            editor={ ClassicEditor }
-            data={this.state.data}
-            onChange={this.onEditorChange}
+              editor={ ClassicEditor }
+              onChange={(event, editor) => {
+              CKEdata = editor.getData();
+              console.log({ event, editor, CKEdata });
+            }}
           />
           <Button style={buttonStyle} onClick={this.writeBoard} block>
             저장하기
