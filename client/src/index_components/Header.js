@@ -61,16 +61,11 @@ class Header extends Component {
     const NavbarStyle = {
       position: "relative",
       padding: "0",
-      margin: "0"
-    };
-    const LogWrapStyle = {
-      position: "absolute",
-      top: "45px",
-      right: "15px"
+      margin: "0",
     };
     const ONlog = {
       display: this.state.logoutDisplay,
-      margin: "0px 5px 0px 10px",
+      margin: "15px 5px 0px 10px",
       background: "none",
       color: "black",
       fontWeight: "400",
@@ -78,7 +73,7 @@ class Header extends Component {
     };
     const OFFlog = {
       display: this.state.loginDisplay,
-      margin: "0px 5px 0px 10px",
+      margin: "15px 5px 0px 10px",
       background: "none",
       color: "black",
       fontWeight: "400",
@@ -91,16 +86,25 @@ class Header extends Component {
       position: "absolute",
       background: "white",
       color: "black",
-      height: "100px",
-      lineHeight: "85px",
-      fontSize: "40px",
+      height: "60px",
+      lineHeight: "42.5px",
+      fontSize: "30px",
       top: "0",
       borderBottom: "1px solid black"
     };
+    const LogWrapStyle = {
+      position: "absolute",
+      top: "12px",
+      right: "8px",
+      marginTop: "45px",
+      flexBasis: "300px",
+      flexGrow: "1"
+    };
     const MenuWrapper = {
-      marginTop: "100px",
-      justifyContent: "center",
-      alignItems: "center",
+      marginTop: "40px",
+      marginBottom: "-20px",
+      flexBasis: "800px",
+      flexGrow: "1",
       borderBottom: "1px solid black"
     };
 
@@ -120,6 +124,12 @@ class Header extends Component {
       }
       &:focus {
         outline: none;
+      }
+    `
+    const NavWrapper = styled.div`{
+        display: flex;
+        flexDirection: row;
+        flexWrap: wrap;
       }
     `
     const last = {
@@ -142,75 +152,75 @@ class Header extends Component {
         <Navbar style={NavbarStyle} bg="white">
           <Navbar.Brand href="/" style={titleStyle}>
             <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                Scarlet WEB Server
+              DONGRIMONG
             </SplitText>
           </Navbar.Brand>
           <Navbar.Toggle />
-          <Navbar.Collapse style={LogWrapStyle}>
-            {/* 로그스타일 */}
 
-            <NavLink to="/LoginForm">
-              <Button style={OFFlog} variant="primary">
-                LogIn
+          <NavWrapper>
+
+            <Navbar.Collapse style={MenuWrapper}>
+              {/* MENU */}
+              <NavLink to="/best">
+                <Menubutton className="hvr-float">
+                  BEST
+                </Menubutton>
+              </NavLink>
+              <NavLink to="/shop">
+                <Menubutton className="hvr-float">
+                  SHOP 
+                </Menubutton>
+              </NavLink>
+              <NavLink to="/support">
+                <Menubutton className="hvr-float">
+                  EVENT
+                </Menubutton>
+              </NavLink>
+              <NavLink to="/community">
+                <Menubutton className="hvr-float">
+                  SALE
+                </Menubutton>
+              </NavLink>
+              <NavLink to="/ChatRoom">
+                <Menubutton className="hvr-float">
+                  LIVECHAT
+                </Menubutton>
+              </NavLink>
+              <NavLink to="/store">
+                <Menubutton style={last} className="hvr-float">
+                  FAQ
+                </Menubutton>
+              </NavLink>
+            </Navbar.Collapse>
+
+            <Navbar.Collapse style={LogWrapStyle}>
+              {/* 로그스타일 */}
+
+              <NavLink to="/LoginForm">
+                <Button style={OFFlog} variant="primary">
+                  LogIn
+                </Button>
+              </NavLink>
+
+              <NavLink to="/RegisterForm">
+                <Button style={OFFlog} variant="primary">
+                  GetAccount
+                </Button>
+              </NavLink>
+
+              <NavLink to="/MypageForm">
+                <Button style={ONlog} variant="primary">
+                  PROFILE
+                </Button>
+              </NavLink>
+
+              <Button style={ONlog} onClick={this.logout} variant="primary">
+                LOGOUT
               </Button>
-            </NavLink>
 
-            <NavLink to="/RegisterForm">
-              <Button style={OFFlog} variant="primary">
-                GetAccount
-              </Button>
-            </NavLink>
+            </Navbar.Collapse>
 
-            <NavLink to="/MypageForm">
-              <Button style={ONlog} variant="primary">
-                Profile
-              </Button>
-            </NavLink>
-
-            <Button style={ONlog} onClick={this.logout} variant="primary">
-              LogOut
-            </Button>
-
-          </Navbar.Collapse>
-          <Navbar.Collapse style={MenuWrapper}>
-            {/* <NavLink to="/mypage">
-              <Button style={buttonStyle} variant="primary">
-                회원정보 수정
-              </Button>
-            </NavLink> */}
-
-            {/* MENU */}
-            <NavLink to="/notice">
-              <Menubutton className="hvr-float">
-                Notice
-              </Menubutton>
-            </NavLink>
-            <NavLink to="/servers">
-              <Menubutton className="hvr-float">
-                Servers
-              </Menubutton>
-            </NavLink>
-            <NavLink to="/support">
-              <Menubutton className="hvr-float">
-                Support
-              </Menubutton>
-            </NavLink>
-            <NavLink to="/community">
-              <Menubutton className="hvr-float">
-                Community
-              </Menubutton>
-            </NavLink>
-            <NavLink to="/ChatRoom">
-              <Menubutton className="hvr-float">
-                LiveChat
-              </Menubutton>
-            </NavLink>
-            <NavLink to="/store">
-              <Menubutton style={last} className="hvr-float">
-                Store
-              </Menubutton>
-            </NavLink>
-          </Navbar.Collapse>
+          </NavWrapper>
         </Navbar>
       </div>
     );

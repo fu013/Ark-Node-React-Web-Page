@@ -1,6 +1,6 @@
 {
     "name": "scarlet",
-    "description": "Scarlet's ARKserver WEBpage",
+    "description": "Scarlet's WEBpage",
     "version": "1.0.0",
     "private": true,
     "engines": {
