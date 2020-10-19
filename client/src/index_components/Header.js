@@ -99,7 +99,7 @@ class Header extends Component {
       background: none;
       color: black;
       padding: 20px;
-      line-height: 60px;
+      line-height: 20px;
       font-size: 1.5em;
       border: none;
       vertical-align: top;
@@ -124,8 +124,8 @@ class Header extends Component {
       }
     `
     const MenuWrapper = {
-      margin: "40px",
-      borderTop: "1px solid black",
+      width: "100%",
+      borderTop: "1px solid black"
     };
 
     const LogWrapStyle = {
@@ -153,11 +153,13 @@ class Header extends Component {
 
     const LogoDiv = styled.div`{
         border-bottom: 1px solid black;
-        height: 300px;
-        margin-top: 20px;
+        height: 200px;
+        margin-top: 60px;
         z-index: 9999;
         display: block;
-
+        background-image: url('img/logo.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
       }
     `
     const MenuDiv = {

@@ -10,10 +10,10 @@ import Video from "../widget_components/Video"
 class Body extends Component {
   render() {
     const Item = styled.h3`
-      height: 600px;
+      height: 500px;
       background: lightgray;
       position: relative;
-      background-image: url('https://source.unsplash.com/1600x600/?cat');
+      background-image: url('https://source.unsplash.com/1600x600/?seoul');
       background-repeat: no-repeat;
       background-size: 100% 100%;
       &:focus {
@@ -24,10 +24,10 @@ class Body extends Component {
       minWidth: "1200px"
     };
     const ItemSecond = {
-      backgroundImage: "url('https://source.unsplash.com/1600x600/?dog')"
+      backgroundImage: "url('https://source.unsplash.com/1600x600/?korea')"
     };
     const ItemThird = {
-      backgroundImage: "url('https://source.unsplash.com/1600x600/?raccoon')"
+      backgroundImage: "url('https://source.unsplash.com/1600x600/?shop')"
     };
     const WidgetWrapper = styled.div `{
       width: 1000px;
