@@ -178,13 +178,13 @@ class Header extends Component {
 
                   <NavLink to="/LoginForm">
                     <Button style={OFFlog} variant="primary">
-                      LogIn
+                      LOGIN
                     </Button>
                   </NavLink>
 
                   <NavLink to="/RegisterForm">
                     <Button style={OFFlog} variant="primary">
-                      GetAccount
+                      GET ACCOUNT
                     </Button>
                   </NavLink>
 
