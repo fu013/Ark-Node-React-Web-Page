@@ -21,7 +21,7 @@ class Body extends Component {
       }
     `
     const divStyle = {
-      minWidth: "1600px"
+      minWidth: "1200px"
     };
     const ItemSecond = {
       backgroundImage: "url('https://source.unsplash.com/1600x600/?dog')"
@@ -30,7 +30,7 @@ class Body extends Component {
       backgroundImage: "url('https://source.unsplash.com/1600x600/?raccoon')"
     };
     const WidgetWrapper = styled.div `{
-      width: 1300px;
+      width: 1000px;
       overflow: hidden;
       margin: 0 auto;
     }`

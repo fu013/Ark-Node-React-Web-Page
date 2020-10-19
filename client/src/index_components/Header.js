@@ -92,25 +92,10 @@ class Header extends Component {
       top: "0",
       borderBottom: "1px solid black"
     };
-    const LogWrapStyle = {
-      position: "absolute",
-      top: "12px",
-      right: "8px",
-      marginTop: "45px",
-      flexBasis: "300px",
-      flexGrow: "1"
-    };
-    const MenuWrapper = {
-      marginTop: "40px",
-      marginBottom: "-20px",
-      flexBasis: "800px",
-      flexGrow: "1",
-      borderBottom: "1px solid black"
-    };
 
     /* Styled Components */
     const Menubutton = styled.button`
-      margin: 0px 100px 0px 10px;
+      margin: 0px 30px 0px 10px;
       background: none;
       color: black;
       padding: 20px;
@@ -126,17 +111,37 @@ class Header extends Component {
         outline: none;
       }
     `
+
+
+    // header
     const NavWrapper = styled.div`{
+        width: 100%;
         display: flex;
-        flexDirection: row;
-        flexWrap: wrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
       }
     `
+    const MenuWrapper = {
+      marginTop: "40px",
+      marginBottom: "-20px",
+      marginLeft: "5%",
+      flexBasis: "87.5%",
+      borderBottom: "1px solid black"
+    };
+    const LogWrapStyle = {
+      marginTop: "45px",
+      flexBasis: "12.5%"
+    };
+    
+
     const last = {
       margin: "0px 0px 0px 10px"
     };
     const divStyle = {
-      minWidth: "1600px"
+      display: "block",
+      minWidth: "1200px"
     };
     const charPoses = {
       exit: { opacity: 0, y: 20 },
@@ -158,68 +163,69 @@ class Header extends Component {
           <Navbar.Toggle />
 
           <NavWrapper>
+            <div style={MenuWrapper}>
+              <Navbar.Collapse>
+                {/* MENU */}
+                <NavLink to="/best">
+                  <Menubutton className="hvr-float">
+                    BEST
+                  </Menubutton>
+                </NavLink>
+                <NavLink to="/shop">
+                  <Menubutton className="hvr-float">
+                    SHOP 
+                  </Menubutton>
+                </NavLink>
+                <NavLink to="/support">
+                  <Menubutton className="hvr-float">
+                    EVENT
+                  </Menubutton>
+                </NavLink>
+                <NavLink to="/community">
+                  <Menubutton className="hvr-float">
+                    SALE
+                  </Menubutton>
+                </NavLink>
+                <NavLink to="/ChatRoom">
+                  <Menubutton className="hvr-float">
+                    LIVECHAT
+                  </Menubutton>
+                </NavLink>
+                <NavLink to="/store">
+                  <Menubutton style={last} className="hvr-float">
+                    FAQ
+                  </Menubutton>
+                </NavLink>
+              </Navbar.Collapse>
+            </div>
+            <div style={LogWrapStyle}>
+              <Navbar.Collapse>
+                {/* 로그스타일 */}
 
-            <Navbar.Collapse style={MenuWrapper}>
-              {/* MENU */}
-              <NavLink to="/best">
-                <Menubutton className="hvr-float">
-                  BEST
-                </Menubutton>
-              </NavLink>
-              <NavLink to="/shop">
-                <Menubutton className="hvr-float">
-                  SHOP 
-                </Menubutton>
-              </NavLink>
-              <NavLink to="/support">
-                <Menubutton className="hvr-float">
-                  EVENT
-                </Menubutton>
-              </NavLink>
-              <NavLink to="/community">
-                <Menubutton className="hvr-float">
-                  SALE
-                </Menubutton>
-              </NavLink>
-              <NavLink to="/ChatRoom">
-                <Menubutton className="hvr-float">
-                  LIVECHAT
-                </Menubutton>
-              </NavLink>
-              <NavLink to="/store">
-                <Menubutton style={last} className="hvr-float">
-                  FAQ
-                </Menubutton>
-              </NavLink>
-            </Navbar.Collapse>
+                <NavLink to="/LoginForm">
+                  <Button style={OFFlog} variant="primary">
+                    LogIn
+                  </Button>
+                </NavLink>
 
-            <Navbar.Collapse style={LogWrapStyle}>
-              {/* 로그스타일 */}
+                <NavLink to="/RegisterForm">
+                  <Button style={OFFlog} variant="primary">
+                    GetAccount
+                  </Button>
+                </NavLink>
 
-              <NavLink to="/LoginForm">
-                <Button style={OFFlog} variant="primary">
-                  LogIn
+                <NavLink to="/MypageForm">
+                  <Button style={ONlog} variant="primary">
+                    PROFILE
+                  </Button>
+                </NavLink>
+
+                <Button style={ONlog} onClick={this.logout} variant="primary">
+                  LOGOUT
                 </Button>
-              </NavLink>
 
-              <NavLink to="/RegisterForm">
-                <Button style={OFFlog} variant="primary">
-                  GetAccount
-                </Button>
-              </NavLink>
-
-              <NavLink to="/MypageForm">
-                <Button style={ONlog} variant="primary">
-                  PROFILE
-                </Button>
-              </NavLink>
-
-              <Button style={ONlog} onClick={this.logout} variant="primary">
-                LOGOUT
-              </Button>
-
-            </Navbar.Collapse>
-
+              </Navbar.Collapse>
+            </div>
           </NavWrapper>
         </Navbar>
       </div>

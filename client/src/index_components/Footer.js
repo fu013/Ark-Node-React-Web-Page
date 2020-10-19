@@ -8,7 +8,7 @@ import { SiMinutemailer } from 'react-icons/si';
 class Footer extends Component{
     render(){
         const Footer = styled.div`
-            min-width: 1600px;
+            min-width: 1200px;
             background-color: rgba(96, 94, 94, 1);
             color: white;
             height: 100px;

@@ -62,7 +62,7 @@ class BoardDetail extends Component {
     const divStyle = {
       boxSizing: "border-box",
       padding: "100px 200px",
-      minWidth: "1600px",
+      minWidth: "1200px",
     };
     const tdStyle = {
       height: "500px"
