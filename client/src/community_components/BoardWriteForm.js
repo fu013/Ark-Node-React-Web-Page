@@ -97,7 +97,7 @@ class BoardWriteForm extends Component {
     const Section = styled.div `{
       box-sizing: border-box;
       padding: 30px 500px;
-      min-width: 1200px;
+      min-width: 1400px;
     }`
     const ckeTitleStyle = {
       textAlign: "center",

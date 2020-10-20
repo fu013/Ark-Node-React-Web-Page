@@ -10,7 +10,7 @@ import Video from "../widget_components/Video"
 class Body extends Component {
   render() {
     const Item = styled.h3`
-      height: 500px;
+      height: 400px;
       background: lightgray;
       position: relative;
       background-image: url('https://source.unsplash.com/1600x600/?seoul');
@@ -21,7 +21,8 @@ class Body extends Component {
       }
     `
     const divStyle = {
-      minWidth: "1200px"
+      width: "1400px",
+      margin: "0 auto"
     };
     const ItemSecond = {
       backgroundImage: "url('https://source.unsplash.com/1600x600/?korea')"
@@ -36,7 +37,8 @@ class Body extends Component {
     }`
     const ContentWrapper = styled.div `{
       width: 1200px;
-      margin: 50px auto 0;
+      margin: 110px auto 0;
+      text-align: center;
       box-sizing: border-box;
       padding: 20px;
     }`
@@ -93,11 +95,11 @@ class Body extends Component {
     }`
 
     const ContentTitle = styled.h3 `{
-      font-size: 20px;
+      font-size: 30px;
       text-align: center;
     }`
     const ContentSubTitle = styled.p `{
-      font-size: 10px;
+      font-size: 20px;
       text-align: center;
     }`
     // 슬릭 슬라이더 세팅
@@ -109,6 +111,44 @@ class Body extends Component {
       slidesToScroll: 1, // 한번 스크롤시 몇장의 슬라이드를 넘길지
       autoplay: true
     };
+    const DescriptionBox = styled.div `{
+      margin: 40px auto 0;
+      height: 600px;
+      width: 1400px;
+    }`
+    const LargeBox = styled.div`{
+      display: inline-block;
+      float: left;
+      width: 700px;
+      height: 700px;
+      background-image: url('https://source.unsplash.com/600x600/?star');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }`
+    const SmallBox = styled.div`{
+      display: inline-block;
+      float: right;
+      width: 350px;
+      height: 350px;
+    }`
+    const SmallBoxImg = styled.img `{
+      width: 100%;
+      height: 100%;
+    }`
+    const SmallBoxDescription = {
+      boxSizing: "borderBox",
+      padding: "30px",
+      textAlign: "left"
+    }
+    const LineBorder = styled.hr `{
+      display: inline-block;
+      border 2px solid #E2E2E2;
+      width: 21%;
+    }`
+    const BriefPlot = styled.p `{
+      word-break: break-all;
+    }`
+
     return (
       <div style={divStyle}>
         <Slider {...settings}>
@@ -122,13 +162,42 @@ class Body extends Component {
             <Item style={ItemThird}>{/* Slider Img 3 */}</Item>
           </div>
         </Slider>
+        <DescriptionBox>
+
+          <LargeBox></LargeBox>
+
+          <SmallBox style={SmallBoxDescription}>
+            <h4>Pet Trending</h4>
+            <LineBorder></LineBorder>
+            <BriefPlot>ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum
+            ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum
+            </BriefPlot>
+          </SmallBox>
+          <SmallBox>
+           <SmallBoxImg src="https://source.unsplash.com/600x600/?cat" alt="박스 이미지"/>
+          </SmallBox>
+          <SmallBox>
+            <SmallBoxImg src="https://source.unsplash.com/600x600/?dog" alt="박스 이미지"/> 
+          </SmallBox>
+          <SmallBox style={SmallBoxDescription}>
+            <h4>Practical Spaces</h4>
+            <LineBorder></LineBorder>
+            <BriefPlot>ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum
+            ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum
+            </BriefPlot>
+          </SmallBox> 
+        </DescriptionBox>
+
+
+
         <ContentWrapper>
           <ContentTitle>
-            Time Attack
+            Fresh
           </ContentTitle>
           <ContentSubTitle>
-            오늘만 이 가격 한정 출시
+            Most Current Products on this month
           </ContentSubTitle>
+          <LineBorder></LineBorder>
           <ContentUl>
             <ContentLi>
               <ContentLiImg src="https://source.unsplash.com/285x285/?korea" alt="이미지"/>
@@ -205,9 +274,9 @@ class Body extends Component {
 
           </ContentUl>
         </ContentWrapper>
-        <WidgetWrapper>
+{/*         <WidgetWrapper>
           <DiscordWidget/><Video/>
-        </WidgetWrapper>
+        </WidgetWrapper> */}
       </div>
     );
   }

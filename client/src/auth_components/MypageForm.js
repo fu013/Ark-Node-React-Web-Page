@@ -21,7 +21,7 @@ const MypageForm = () => {
   };
   const Section = styled.div `{
     margin: 40px 200px 50px 200px;
-    min-width: 1200px;
+    min-width: 1400px;
   }`
   const H1 = styled.h1 `{
     text-align: center;

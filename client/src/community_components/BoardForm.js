@@ -84,7 +84,7 @@ class BoardForm extends Component {
   render() {
     const divStyle = {
       margin: "50px auto",
-      minWidth: "1200px",
+      minWidth: "1400px",
       boxSizing: "border-box",
       padding: "0 400px",
       marginBottom: "80px"

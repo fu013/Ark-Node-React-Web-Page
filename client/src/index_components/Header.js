@@ -66,42 +66,46 @@ class Header extends Component {
     const ONlog = {
       display: this.state.logoutDisplay,
       margin: "15px 5px 0px 10px",
+      outline: "0",
+      border: "0",
       background: "none",
       color: "black",
       fontWeight: "400",
-      border: "1px solid black"
+      textDecoration: "none"
     };
     const OFFlog = {
       display: this.state.loginDisplay,
       margin: "15px 5px 0px 10px",
+      outline: "0",
+      border: "0",
       background: "none",
       color: "black",
       fontWeight: "400",
-      border: "1px solid black"
+      textDecoration: "none"
     }
     const titleStyle = {
       display: "block",
       width: "100%",
       textAlign: "center",
       position: "absolute",
-      background: "white",
+      background: "#f2f2f2",
       color: "black",
-      height: "60px",
+      height: "50px",
       lineHeight: "42.5px",
       fontSize: "30px",
       top: "0",
-      borderBottom: "1px solid black"
     };
 
     /* Styled Components */
     const Menubutton = styled.button`
-      margin: 0px 30px 0px 10px;
+      margin: 0px 0px 0px 10px;
       background: none;
+      outline: 0;
+      border: 0;
       color: black;
       padding: 20px;
       line-height: 20px;
-      font-size: 1.5em;
-      border: none;
+      font-size: 1.2em;
       vertical-align: top;
       &:hover {
         color: cornflowerblue;
@@ -131,8 +135,8 @@ class Header extends Component {
 
     const LogWrapStyle = {
       position: "absolute",
-      right: "5px",
-      bottom: "10px"
+      right: "40px",
+      bottom: "6px"
     };
     
 
@@ -141,7 +145,7 @@ class Header extends Component {
     };
     const divStyle = {
       display: "block",
-      minWidth: "1200px"
+      minWidth: "1400px"
     };
     const charPoses = {
       exit: { opacity: 0, y: 20 },
@@ -153,16 +157,18 @@ class Header extends Component {
     };
 
     const LogoDiv = styled.div`{
-        border-bottom: 1px solid black;
+        text-align: center;
         height: 200px;
+        line-height: 200px;
         margin-top: 60px;
         z-index: 9999;
         display: block;
-        background-image: url('img/logo.jpg');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
       }
     `
+    const LogoIMG = styled.img`{
+      width: 400px;
+      height: 100px;
+    }`
     const ToMenuCenter = {
       justifyContent: "center"
     }
@@ -202,6 +208,7 @@ class Header extends Component {
             <NavWrapper>
               <div style={MenuWrapper}>
               <LogoDiv>
+                <LogoIMG src="img/dongrimong.png" alt="logo"/>
               </LogoDiv>
                 <Navbar.Collapse style={ToMenuCenter}>
                   {/* MENU */}

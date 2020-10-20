@@ -28,7 +28,7 @@ class Community extends Component {
       padding: "0",
       margin: "0",
       width: "100%",
-      minWidth: "1200px"
+      minWidth: "1400px"
     };
     const NewWriteButton = {
       position: "absolute",
@@ -40,7 +40,7 @@ class Community extends Component {
     const H1 = styled.h1 `{
       text-align: center;
       margin-top: 40px;
-      min-width: 1200px;
+      min-width: 1400px;
       font-weight: 333;
     }`
 
