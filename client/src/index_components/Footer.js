@@ -20,7 +20,7 @@ class Footer extends Component{
         const IconWrapper = styled.h3`{
             position: absolute;
             margin-right: 10px;
-            right: 10px;
+            right: 30px;
             top: 30px;
         }`
         const IconSizeStyle = {
@@ -58,7 +58,7 @@ class Footer extends Component{
             <Footer>
                 <ul style={FooterMenu}>
                     <li style={FooterMenuLi}><SiGnuprivacyguard style={IconSizeStyle2}/>Privacy Policy</li>
-                    <li style={FooterMenuLi}><AiOutlineLoading3Quarters style={IconSizeStyle2}/>2020.10~ing ScarletWEB</li>
+                    <li style={FooterMenuLi}><AiOutlineLoading3Quarters style={IconSizeStyle2}/>2020.10~ing LeeSeungChan</li>
                     <li style={FooterMenuLiLast}><SiMinutemailer style={IconSizeStyle2}/>Contact Me</li>
                 </ul>
                 <IconWrapper>

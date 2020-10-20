@@ -12,6 +12,7 @@ import BoardWriteForm from "./community_components/BoardWriteForm";
 import BoardDetail from "./community_components/BoardDetail";
 import JoinRoom from "./chat_components/JoinRoom/JoinRoom";
 import Chat from "./chat_components/Chat/Chat";
+import Shop from "./gallery_components/shop";
 
 ReactDOM.render(
   <HashRouter>
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/board/detail" component={BoardDetail}/>
         <Route path="/ChatRoom/Chat" component={Chat}/>
         <Route path="/ChatRoom" component={JoinRoom}/>
+        <Route path="/Shop" component={Shop}/>
         <Route path="*" component={NotFound}/>
       </Switch>
     </div>

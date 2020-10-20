@@ -175,7 +175,7 @@ class Header extends Component {
     return (
       <div style={divStyle}>
         <Navbar style={NavbarStyle} bg="white">
-          <Navbar.Brand href="/" style={titleStyle}>
+          <Navbar.Brand style={titleStyle}>
             <div style={LogWrapStyle}>
                 <Navbar.Collapse>
                   {/* 로그스타일 */}
@@ -208,7 +208,9 @@ class Header extends Component {
             <NavWrapper>
               <div style={MenuWrapper}>
               <LogoDiv>
-                <LogoIMG src="img/dongrimong.png" alt="logo"/>
+                <NavLink to="/">
+                  <LogoIMG src="img/dongrimong.png" alt="logo"/>
+                </NavLink>
               </LogoDiv>
                 <Navbar.Collapse style={ToMenuCenter}>
                   {/* MENU */}
@@ -227,7 +229,7 @@ class Header extends Component {
                       EVENT
                     </Menubutton>
                   </NavLink>
-                  <NavLink to="/community">
+                  <NavLink to="/sale">
                     <Menubutton className="hvr-float">
                       SALE
                     </Menubutton>
@@ -237,7 +239,7 @@ class Header extends Component {
                       LIVECHAT
                     </Menubutton>
                   </NavLink>
-                  <NavLink to="/store">
+                  <NavLink to="/community">
                     <Menubutton style={last} className="hvr-float">
                       FAQ
                     </Menubutton>

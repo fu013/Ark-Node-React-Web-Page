@@ -1,0 +1,25 @@
+section {
+    width: 1400px;
+    margin: 0 auto;
+    height: 600px;
+}
+.galleryWrapper {
+    width: 100%;
+}
+.galleryUl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.galleryLi {
+    display: inline-block;
+    width: 260px;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid black;
+    height: 264px;
+}
+.galleryLi:last-child {
+    margin-right: 0px;
+}
