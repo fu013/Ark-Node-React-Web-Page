@@ -110,6 +110,7 @@ class Header extends Component {
       &:focus {
         outline: none;
       }
+      font-weight: 300;
     `
 
 
@@ -162,9 +163,6 @@ class Header extends Component {
         background-size: 100% 100%;
       }
     `
-    const MenuDiv = {
-
-    }
     const ToMenuCenter = {
       justifyContent: "center"
     }

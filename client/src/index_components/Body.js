@@ -34,6 +34,72 @@ class Body extends Component {
       overflow: hidden;
       margin: 0 auto;
     }`
+    const ContentWrapper = styled.div `{
+      width: 1200px;
+      margin: 50px auto 0;
+      box-sizing: border-box;
+      padding: 20px;
+    }`
+    const ContentUl = styled.ul `{
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }`
+    const ContentLi = styled.li `{
+      position: relative;
+      margin-right: 20px;
+      margin-top: 20px;
+      vertical-align: top;
+      text-align: center;
+      width: 372.666666667px;
+      height: 452.666666667px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+      &:nth-child(3) {
+        margin-top: 0;
+      }
+    }`
+    const ContentLiImg = styled.img `{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 332.666666667px;
+      height: 332.666666667px;
+      overflow: hidden;
+    }`
+    const ImgUl = styled.ul `{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }`
+    const ImgLi = styled.li `{
+    }`
+
+    const ContentTitle = styled.h3 `{
+      font-size: 20px;
+      text-align: center;
+    }`
+    const ContentSubTitle = styled.p `{
+      font-size: 10px;
+      text-align: center;
+    }`
     // 슬릭 슬라이더 세팅
     const settings = {
       dots: true, // 캐러셀이미지가 몇번째인지 알려주는 점을 보여줄지 정한다.
@@ -56,6 +122,89 @@ class Body extends Component {
             <Item style={ItemThird}>{/* Slider Img 3 */}</Item>
           </div>
         </Slider>
+        <ContentWrapper>
+          <ContentTitle>
+            Time Attack
+          </ContentTitle>
+          <ContentSubTitle>
+            오늘만 이 가격 한정 출시
+          </ContentSubTitle>
+          <ContentUl>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?korea" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?dog" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?pet" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?cat" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?lion" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?star" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?weapon" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?pokemon" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+            <ContentLi>
+              <ContentLiImg src="https://source.unsplash.com/285x285/?movie" alt="이미지"/>
+              <ImgUl>
+                <ImgLi>제품명 : ipsum</ImgLi>
+                <ImgLi>제품가격 : ipsum</ImgLi>
+                <ImgLi>할인가격 : ipsum</ImgLi>
+              </ImgUl>
+            </ContentLi>
+
+          </ContentUl>
+        </ContentWrapper>
         <WidgetWrapper>
           <DiscordWidget/><Video/>
         </WidgetWrapper>
